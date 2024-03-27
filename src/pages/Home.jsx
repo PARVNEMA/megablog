@@ -10,14 +10,14 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // if (userAuth.status === true) {
+    if (userAuth.status === true) {
       appwriteService.getPosts([]).then((posts) => {
         if (posts) {
           setPosts(posts.documents);
         }
       });
-    // }
-    // else navigate("/");
+    }
+    else navigate("/");
 
     return () => {
       // console.clear()
