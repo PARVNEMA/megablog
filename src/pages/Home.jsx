@@ -3,6 +3,7 @@ import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import AllPosts from "./AllPosts";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -47,7 +48,8 @@ export default function Home() {
           <div className="flex flex-wrap">
             <div className="p-2 w-full">
               <h1 className="text-2xl font-bold text-white hover:text-gray-500">
-                Welcome. Login to get started
+               
+                  <AllPosts/>
               </h1>
             </div>
           </div>
